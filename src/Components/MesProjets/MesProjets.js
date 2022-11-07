@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
 import UnProjetVignette from '../UnProjetVignette/UnProjetVignette';
-import { collection, onSnapshot } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
-import { db } from '../../config/firebase';
 import { Outlet } from 'react-router-dom';
 
 

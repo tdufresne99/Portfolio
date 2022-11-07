@@ -8,5 +8,4 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <App />
 );
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

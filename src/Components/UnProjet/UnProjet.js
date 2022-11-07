@@ -15,7 +15,7 @@ const UnProjet = ({projets}) => {
                     <h2 className="mt-12 mb-6 text-2xl text-green-700">// {projet.titre}</h2>
                     <div className="mb-8 p-4 border-4 border-green-700 border-dashed">
                         <div className="video_wrapper" >
-                            <iframe src={projet.lien} className="border-4 border-black aspect-video"></iframe>
+                            <iframe title={projet.titre} src={projet.lien} className="border-4 border-black aspect-video"></iframe>
                         </div>
                     </div>
                 </> 
