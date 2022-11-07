@@ -26,8 +26,6 @@ const UnProjetVignette = ({projet}) => {
             </div>
         </>
     );
-    /*
-    */
 };
 
 export default UnProjetVignette;

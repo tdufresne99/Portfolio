@@ -19,8 +19,6 @@ const Header = () => {
                 <nav className="">
                     <div className="max-w-lg">
                         <ul className="flex text-left mt-12 mb-24">
-                            {/* <li className="basis-1/4 ml-[-5.5%] mr-5"><Link to="/portfolio" onClick={onClickHandler}><p><span className="text-yellow-100 hover:bg-neutral-700 hover:underline">Jeu</span><span className="text-sky-700">()</span>;</p></Link></li>
-                            <li className="basis-1/4 mr-5"><Link to="/"><p><span className="text-yellow-100 hover:bg-neutral-700 hover:underline">Web</span><span className="text-sky-700">()</span>;</p></Link></li> */}
                             <li className="basis-full mr-5"><a href="https://github.com/tdufresne99" target="_blank"><p><span className="text-yellow-100 hover:bg-neutral-700 hover:underline">GitHub</span><span className="text-sky-700">()</span>;</p></a></li>
                             <li className="basis-full mr-5"><a href="/cv/cv.pdf" target="_blank"><p><span className="text-yellow-100 hover:bg-neutral-700 hover:underline">CV</span><span className="text-sky-700">()</span>;</p></a></li>
                         </ul>
