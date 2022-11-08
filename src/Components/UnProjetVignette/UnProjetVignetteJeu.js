@@ -1,18 +1,18 @@
 
-const UnProjetVignette = ({projet}) => {
+const UnProjetVignetteJeu = ({projet}) => {
 
     return (
         <>
+            <h2 className="mb-5 text-xl text-yellow-100 "><span className="text-yellow-100 hover:bg-neutral-700 hover:underline">{projet.titre}</span><span className="text-purple-400">() &#123;</span></h2>
             <div className="p-3 border-4 border-green-700 border-dashed">
                 <img src={projet.img} className="border-4 border-black aspect-video" alt={projet.titre}></img>
             </div>
             <div className="mt-4">
-                <h2 className="text-xl text-yellow-100 "><span className="text-yellow-100 hover:bg-neutral-700 hover:underline">{projet.titre}</span><span className="text-purple-400">() &#123;</span></h2>
-                {(projet.titre === 'Nourse') ? <p className="pt-2 pb-5 text-green-700">// En cours de production (alpha)</p> : null}
+                {(projet.titre === 'Nourse') ? <p className="d-inline pt-2 pb-5 text-green-700">// En production (alpha).</p> : null}
                 <p className="text-cyan-200">genre <span className="text-white">= </span><span className="text-orange-300">"{projet.genre}"</span><span className="text-white">;</span></p>
                 <p className="pt-2 text-green-700">/*</p>
                 {(projet.description !== '') ? 
-                    <ul className="text-sm text-green-700">
+                    <ul className="text-green-700">
                         {projet.description.map((point,i) => {
                             return <li key={i} className="p-2">- {point}</li>
                         })}
@@ -28,4 +28,4 @@ const UnProjetVignette = ({projet}) => {
     );
 };
 
-export default UnProjetVignette;
+export default UnProjetVignetteJeu;

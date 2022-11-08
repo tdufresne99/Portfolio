@@ -1,19 +1,39 @@
 import {RouterProvider, createBrowserRouter, Navigate} from 'react-router-dom';
 import Layout from '../Layout/Layout';
-import MesProjets from '../MesProjets/MesProjets';
-import UnProjet from '../UnProjet/UnProjet';
+import MesProjetsJeu from '../MesProjets/MesProjetsJeu';
+import UnProjetJeu from '../UnProjet/UnProjetJeu';
+import LayoutJeu from '../Layout/LayoutJeu';
+import HeaderWeb from '../Layout/LayoutWeb';
 
 import { collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { db } from '../../config/firebase';
+import MesProjetsWeb from '../MesProjets/MesProjetsWeb';
+import UnProjetWeb from '../UnProjet/UnProjetWeb';
 
 function App() {
 
-    const [lesProjets, setLesProjets] = useState([{titre: '', description: '', lien: ''}]);
+    const [lesProjetsJeu, setLesProjetsJeu] = useState([{titre: '', description: '', lien: ''}]);
 
     useEffect(() => {
         const unsub = onSnapshot(collection(db, 'projetsJeu'), (snapshot) => {
-            setLesProjets(snapshot.docs.map(doc => {
+            setLesProjetsJeu(snapshot.docs.map(doc => {
+                return {
+                    ...doc.data(),
+                    id: doc.id
+                };
+            }));
+        });
+        return unsub;
+    }, [])
+    
+
+
+    const [lesProjetsWeb, setLesProjetsWeb] = useState([{titre: '', description: '', lien: ''}]);
+
+    useEffect(() => {
+        const unsub = onSnapshot(collection(db, 'projetsWeb'), (snapshot) => {
+            setLesProjetsWeb(snapshot.docs.map(doc => {
                 return {
                     ...doc.data(),
                     id: doc.id
@@ -23,30 +43,54 @@ function App() {
         return unsub;
     }, [])
 
+
+
     const routes = [
         {
             path: '/',
             element: <Layout/>,
             children: [
                 {
-                    path: 'portfolio',
-                    element: <MesProjets projets={lesProjets}/>,
+                    path: 'portfolio-jeux',
+                    element: <LayoutJeu/>,
                     children: [
                         {
-                            path: ':projetId',
-                            element: <UnProjet  projets={lesProjets}/>
+                            path: 'projet',
+                            element: <MesProjetsJeu projets={lesProjetsJeu}/>,
+                            children: [
+                                {
+                                    path: ':projetId',
+                                    element: <UnProjetJeu  projets={lesProjetsJeu}/>
+                                }
+                            ],
                         }
-                    ],
+                    ]
+                },
+                {
+                    path: 'portfolio-web',
+                    element: <HeaderWeb/>,
+                    children: [
+                        {
+                            path: 'projet',
+                            element: <MesProjetsWeb projets={lesProjetsWeb}/>,
+                            children: [
+                                {
+                                    path: ':projetId',
+                                    element: <UnProjetWeb  projets={lesProjetsWeb}/>
+                                }
+                            ],
+                        }
+                    ]
                 },
                 {
                     index: true,
-                    element: <Navigate to='/portfolio'/>
+                    element: <Navigate to='/portfolio-jeux'/>
                 },
             ],
         },
         {
             path: '*',
-            element: <Navigate to='/portfolio' replace/>
+            element: <Navigate to='/portfolio-jeux' replace/>
         }
     ]
     return (

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-const UnProjet = ({projets}) => {
+const UnProjetJeu = ({projets}) => {
     window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
     const id = useParams();
     const projet = projets[id.projetId];
@@ -25,4 +25,4 @@ const UnProjet = ({projets}) => {
     );
 };
 
-export default UnProjet;
+export default UnProjetJeu;
