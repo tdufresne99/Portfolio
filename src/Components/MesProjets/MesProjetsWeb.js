@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 const MesProjetsWeb = ({projets}) => {
     return (
         <div className="mt-8">
-            <p class='mb-12 text-green-700'>// Ce site est une application React qui utilise une base de données pour intégrer dynamiquement le contenu des différentes sections.</p>
+            <p class='mb-16 text-green-700'>// Ce portfolio est une application React qui utilise une base de données pour intégrer dynamiquement le contenu des différentes sections.</p>
             <ul className="flex flex-wrap text-center justify-between">
                 {
                     projets.map((unProjet,i) => {
