@@ -87,11 +87,11 @@ function App() {
                     element: <Navigate to='/portfolio-jeux'/>
                 },
                 {
-                    path: 'jeu',
+                    path: '/jeu',
                     element: <Navigate to='/portfolio-jeux'/>
                 },
                 {
-                    path: 'web',
+                    path: '/web',
                     element: <Navigate to='/portfolio-web/projet'/>
                 }
             ],
