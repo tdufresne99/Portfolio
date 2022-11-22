@@ -1,10 +1,15 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 const UnProjetJeu = ({projets}) => {
-    window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
     const id = useParams();
     const projet = projets[id.projetId];
-    console.log(projet)
+    console.log(projet);
+
+    useEffect(() => {
+        window.scrollTo({top: 10000, behavior: 'smooth'});
+    }, [projet.id])
+
     return (
         <div className="">
             {
