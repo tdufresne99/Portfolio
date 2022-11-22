@@ -61,6 +61,10 @@ function App() {
                                 {
                                     path: ':projetId',
                                     element: <UnProjetJeu  projets={lesProjetsJeu}/>
+                                },
+                                {
+                                    path: 'web',
+                                    element: <Navigate to='/portfolio-web/projet'/>
                                 }
                             ],
                         }
