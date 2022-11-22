@@ -62,10 +62,6 @@ function App() {
                                     path: ':projetId',
                                     element: <UnProjetJeu  projets={lesProjetsJeu}/>
                                 },
-                                {
-                                    path: 'web',
-                                    element: <Navigate to='/portfolio-web/projet'/>
-                                }
                             ],
                         }
                     ]
@@ -90,6 +86,14 @@ function App() {
                     index: true,
                     element: <Navigate to='/portfolio-jeux'/>
                 },
+                {
+                    path: 'jeu',
+                    element: <Navigate to='/portfolio-jeux'/>
+                },
+                {
+                    path: 'web',
+                    element: <Navigate to='/portfolio-web/projet'/>
+                }
             ],
         },
         {
