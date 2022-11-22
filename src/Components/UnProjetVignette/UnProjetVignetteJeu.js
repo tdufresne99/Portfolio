@@ -3,7 +3,7 @@ const UnProjetVignetteJeu = ({projet}) => {
 
     return (
         <>
-            <h2 className="mb-5 text-xl text-yellow-100 "><span className="text-yellow-100 hover:bg-neutral-700 hover:underline">{projet.titre}</span><span className="text-purple-400">() &#123;</span></h2>
+            <h2 className="mb-5 text-xl text-yellow-100 "><span className="text-sky-700">void </span><span className="text-yellow-100 hover:bg-neutral-700 hover:underline">{projet.titre}</span><span className="text-purple-400">() &#123;</span></h2>
             <div className="p-3 border-4 border-green-700 border-dashed">
                 <img src={projet.img} className="border-4 border-black aspect-video" alt={projet.titre}></img>
             </div>
