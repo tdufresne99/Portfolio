@@ -84,15 +84,15 @@ function App() {
                 },
                 {
                     index: true,
-                    element: <Navigate to='/portfolio-jeux'/>
+                    element: <Navigate to='/portfolio-jeux' replace/>
                 },
                 {
                     path: '/jeu',
-                    element: <Navigate to='/portfolio-jeux'/>
+                    element: <Navigate to='/portfolio-jeux' replace/>
                 },
                 {
                     path: '/web',
-                    element: <Navigate to='/portfolio-web/projet'/>
+                    element: <Navigate to='/portfolio-web/projet' replace/>
                 }
             ],
         },
