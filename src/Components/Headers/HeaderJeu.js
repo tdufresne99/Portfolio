@@ -11,7 +11,7 @@ const HeaderJeu = () => {
             <div>
                 <div className='mt-3 text-green-700'>
                     <p >// Auteur: Thomas Dufresne.</p>
-                    <p >// Finissant en Techniques d'intégration multimédia.</p>
+                    <p >// Étudiant au BAC en géine logiciel.</p>
                     <p className='mb-4'>// À la recherche d'un milieu de stage stimulant et formateur.</p>
                 </div>
                 <p className="mb-16 text-left"><span className='text-purple-300'>using </span><span className="text-cyan-200"><span className="text-emerald-400">ThomasDufresne</span><span className='text-white'>.</span>portfolio</span>;</p>
