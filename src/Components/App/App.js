@@ -3,7 +3,7 @@ import Layout from '../Layout/Layout';
 import MesProjetsJeu from '../MesProjets/MesProjetsJeu';
 import UnProjetJeu from '../UnProjet/UnProjetJeu';
 import LayoutJeu from '../Layout/LayoutJeu';
-import HeaderWeb from '../Layout/LayoutWeb';
+import LayoutWeb from '../Layout/LayoutWeb';
 
 import { collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
@@ -68,7 +68,7 @@ function App() {
                 },
                 {
                     path: 'portfolio-web',
-                    element: <HeaderWeb/>,
+                    element: <LayoutWeb/>,
                     children: [
                         {
                             path: 'projet',
@@ -84,7 +84,7 @@ function App() {
                 },
                 {
                     index: true,
-                    element: <Navigate to='/portfolio-jeux' replace/>
+                    element: <Navigate to='/portfolio-web/projet' replace/>
                 },
                 {
                     path: '/jeu',
@@ -92,7 +92,7 @@ function App() {
                 },
                 {
                     path: '/web',
-                    element: <Navigate to='/portfolio-web/projet' replace/>
+                    element: <Navigate to='/portfolio-web' replace/>
                 }
             ],
         },
