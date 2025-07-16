@@ -98,7 +98,7 @@ function App() {
         },
         {
             path: '*',
-            element: <Navigate to='/portfolio-jeux' replace/>
+            element: <Navigate to='/portfolio-web' replace/>
         }
     ]
     return (
