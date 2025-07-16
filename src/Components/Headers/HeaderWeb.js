@@ -11,7 +11,7 @@ const HeaderWeb = () => {
             <div>
                 <div className='mt-3 text-green-700'>
                     <p >// Auteur: Thomas Dufresne.</p>
-                    <p >// Finissant en Techniques d'intégration multimédia.</p>
+                    <p >// Étudiant au BAC en géine logiciel.</p>
                     <p className='mb-4'>// À la recherche d'un milieu de stage stimulant et formateur.</p>
                 </div>
                 <p className="mb-16 text-left text-purple-300">import <span className='text-yellow-300'>&#123; </span><span className="text-cyan-200">portfolio</span> <span className='text-yellow-300'>&#125;</span> from <span className='text-orange-300'>'thomas-dufresne'</span><span className='text-white'>;</span></p>
